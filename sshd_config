@@ -1,0 +1,31 @@
+PermitRootLogin no
+#MaxAuthTries 6
+#MaxSessions 10
+
+#PubkeyAuthentication yes
+
+ChallengeResponseAuthentication no
+
+# Set this to 'yes' to enable PAM authentication, account processing,
+# and session processing. If this is enabled, PAM authentication will
+# be allowed through the ChallengeResponseAuthentication and
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication via ChallengeResponseAuthentication may bypass
+# the setting of "PermitRootLogin without-password".
+# If you just want the PAM account and session checks to run without
+# PAM authentication, then enable this but set PasswordAuthentication
+# and ChallengeResponseAuthentication to 'no'.
+UsePAM yes
+
+X11Forwarding no
+
+PrintMotd no
+
+AcceptEnv LANG LC_*
+
+HostKey /keys/ssh_host_rsa_key
+
+# override default of no subsystems
+# Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+
